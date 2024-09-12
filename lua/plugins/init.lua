@@ -13,7 +13,7 @@ return {{
     end
 }, {
     "mfussenegger/nvim-dap",
-    lazy = false,
+    -- lazy = false,
     dependencies = {"rcarriga/nvim-dap-ui", "leoluz/nvim-dap-go", "nvim-neotest/nvim-nio"},
     config = function()
         require("configs.dap")
