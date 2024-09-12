@@ -3,7 +3,14 @@ local options = {
         lua = { "stylua" },
         -- c = { "clang-format" },
         -- cpp = { "clang-format" },
-        -- go = { "gofumpt", "goimports-reviser", "golines" },
+        go = { "gofumpt", "goimports-reviser", "golines" },
+        gomod = { "gofumpt", "goimports-reviser" },
+        gowork = { "gofumpt", "goimports-reviser" },
+        gotmpl = { "gofumpt", "goimports-reviser" },
+        javascript = { "prettierd" },
+        typescript = { "prettierd" },
+        javascriptreact = { "prettierd" },
+        typescriptreact = { "prettierd" },
         -- python = { "isort", "black" },
     },
 
@@ -20,13 +27,13 @@ local options = {
         --                 PackConstructorInitializers: Never}",
         --     },
         -- },
-        -- -- Golang
-        -- ["goimports-reviser"] = {
-        --     prepend_args = { "-rm-unused" },
-        -- },
-        -- golines = {
-        --     prepend_args = { "--max-len=80" },
-        -- },
+        -- Golang
+        ["goimports-reviser"] = {
+            prepend_args = { "-rm-unused" },
+        },
+        golines = {
+            prepend_args = { "--max-len=120" },
+        },
         -- -- Lua
         -- stylua = {
         --     prepend_args = {
