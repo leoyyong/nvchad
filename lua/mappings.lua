@@ -1,46 +1,51 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
 
 local map = vim.keymap.set
 
 map("n", ";", ":", {
-    desc = "CMD enter command mode"
+  desc = "CMD enter command mode",
 })
-map("i", "jk", "<ESC>")
+map("i", "jj", "<ESC>")
 
-map("n","<leader>dt", "<cmd> DapNew <cr>", {
-    desc = "new debug session"
+map("n", "<leader>dt", "<cmd> DapNew <cr>", {
+  desc = "new debug session",
 })
-
-
 
 map("n", "<leader>dt", "<cmd> lua require'dap'.toggle_breakpoint() <cr>", {
-    desc = "toggle breakpoint"
+  desc = "toggle breakpoint",
 })
 map("n", "<leader>dc", "<cmd> lua require'dap'.continue() <cr>", {
-    desc = "continue"
+  desc = "continue",
 })
 map("n", "<leader>do", "<cmd> lua require'dap'.step_over() <cr>", {
-    desc = "step over"
+  desc = "step over",
 })
 map("n", "<leader>di", "<cmd> lua require'dap'.step_into() <cr>", {
-    desc = "step into"
+  desc = "step into",
 })
 map("n", "<leader>du", "<cmd> lua require'dap'.step_out() <cr>", {
-    desc = "step out"
+  desc = "step out",
 })
 map("n", "<leader>dr", "<cmd> lua require'dap'.repl.toggle() <cr>", {
-    desc = "toggle repl"
+  desc = "toggle repl",
 })
 map("n", "<leader>dl", "<cmd> lua require'dap'.run_last() <cr>", {
-    desc = "run last"
+  desc = "run last",
 })
 map("n", "<leader>de", "<cmd> lua require'dapui'.eval() <cr>", {
-    desc = "open eval"
+  desc = "open eval",
 })
 
-map('n', '<leader>o', '<cmd>Outline<cr>', {
-    desc = "Toggle outline"
+map("n", "<leader>dgt", "<cmd> lua require'dap-go'.debug_test() <cr>", {
+  desc = "debug the closest method",
+})
+map("n", "<leader>dgl", "<cmd> lua require'dap-go'.debug_last_test() <cr>", {
+  desc = "debug the closest method latest",
+})
+
+map("n", "<leader>o", "<cmd>Outline<cr>", {
+  desc = "Toggle outline",
 })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
